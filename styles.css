@@ -1,0 +1,106 @@
+body {
+  font-family: 'Raleway', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom right, #d3d3d3, #f0f0f0);
+  color: black;
+  transition: background 0.5s ease;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #000;
+    color: white;
+  }
+  form {
+    background: #1f1f1f;
+    color: white;
+  }
+  button {
+    background: #a855f7;
+  }
+}
+
+header {
+  background: #312e81;
+  padding: 20px;
+  text-align: center;
+}
+
+.logo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo-container img {
+  height: 100px;
+}
+
+.logo-container h1 {
+  margin: 10px 0 0;
+  font-family: 'Cinzel Decorative', cursive;
+  font-size: 2em;
+  color: white;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+form {
+  background: white;
+  color: black;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+form label,
+form select,
+form button {
+  width: 100%;
+  margin-bottom: 10px;
+  font-size: 1em;
+  border-radius: 10px;
+}
+
+form select {
+  padding: 8px;
+  border: 1px solid #ccc;
+}
+
+form button {
+  background: #6366f1;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  transition: transform 0.2s, background 0.3s;
+}
+
+form button:hover {
+  transform: scale(1.05);
+  background: #8b5cf6;
+}
+
+.reloj {
+  font-family: monospace;
+  font-size: 1.5em;
+  margin-bottom: 20px;
+}
+
+#mensaje {
+  margin-top: 10px;
+  font-weight: bold;
+  color: green;
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Registro de Asistencia - Coro</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&family=Cinzel+Decorative&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="logo-container">
+      <img src="logo.png" alt="Logo del coro">
+      
+    </div>
+  </header>
+
+  <main>
+    <div id="clock" class="reloj"></div>
+    <form id="registroForm">
+      <label for="nombre">Seleccioná tu nombre:</label>
+      <select id="nombre" required></select>
+
+      <button type="submit">Registrar asistencia</button>
+    </form>
+
+    <p id="mensaje"></p>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
