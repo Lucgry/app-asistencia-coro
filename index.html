@@ -1,31 +1,70 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <title>Registro de Asistencia - Coro</title>
-  <link rel="stylesheet" href="styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&family=Cinzel+Decorative&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Asistencia Coro</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Oswald:wght@300&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
-    <div class="logo-container">
-      <img src="logo.png" alt="Logo del coro">
-      
+    <div class="top-bar">
+        <img src="logo-blanco.png" alt="Logo Estudio Coral">
     </div>
-  </header>
-
-  <main>
-    <div id="clock" class="reloj"></div>
-    <form id="registroForm">
-      <label for="nombre">Seleccioná tu nombre:</label>
-      <select id="nombre" required></select>
-
-      <button type="submit">Registrar asistencia</button>
-    </form>
-
-    <p id="mensaje"></p>
-  </main>
-
-  <script src="script.js"></script>
+    <header>
+        <h1>Registro de Asistencia</h1>
+    </header>
+    <main>
+        <div id="reloj"></div>
+        <div id="selector-container">
+            <select id="integrante">
+                <option value="" disabled selected>Selecciona tu nombre</option>
+                <optgroup label="Sopranos">
+                    <option value="Aparicio Rocío">Aparicio Rocío</option>
+                    <option value="Aramayo Valentina">Aramayo Valentina</option>
+                    <option value="Evangelista Maira">Evangelista Maira</option>
+                    <option value="Ferri Mónica">Ferri Mónica</option>
+                    <option value="Gallardo Cintia">Gallardo Cintia</option>
+                    <option value="Romina Andrea">Romina Andrea</option>
+                    <option value="Ruiz Paola">Ruiz Paola</option>
+                    <option value="Solís Lucero">Solís Lucero</option>
+                    <option value="Suárez Daniela">Suárez Daniela</option>
+                    <option value="Perez Gesualdo Anahi">Perez Gesualdo Anahi</option>
+                </optgroup>
+                <optgroup label="Contraltos">
+                    <option value="Aguilera Abril">Aguilera Abril</option>
+                    <option value="Buchller Patricia">Buchller Patricia</option>
+                    <option value="Caro Zaira">Caro Zaira</option>
+                    <option value="Cuello Sandra">Cuello Sandra</option>
+                    <option value="Galvez Delfina">Galvez Delfina</option>
+                    <option value="Salmoral Carolina">Salmoral Carolina</option>
+                </optgroup>
+                <optgroup label="Tenores">
+                    <option value="Groppa Octavio">Groppa Octavio</option>
+                    <option value="Otero Oscar">Otero Oscar</option>
+                    <option value="Roldán Cristian">Roldán Cristian</option>
+                    <option value="Silva G. José">Silva G. José</option>
+                    <option value="Valdez Julio">Valdez Julio</option>
+                    <option value="Velárdez José">Velárdez José</option>
+                </optgroup>
+                <optgroup label="Bajos">
+                    <option value="Colqui Marcelo">Colqui Marcelo</option>
+                    <option value="Goytia Abel">Goytia Abel</option>
+                    <option value="Ibarra Wally">Ibarra Wally</option>
+                    <option value="Jardín Augusto">Jardín Augusto</option>
+                    <option value="Rocha Ariel">Rocha Ariel</option>
+                    <option value="Villafañe Valentín">Villafañe Valentín</option>
+                </optgroup>
+            </select>
+        </div>
+        <button id="registrar-asistencia">Registrar Asistencia</button>
+        <p id="mensaje"></p>
+    </main>
+    <footer>
+        <p>&copy; 2025 Coro de Cámara de Salta</p>
+    </footer>
+    <script src="script.js"></script>
 </body>
 </html>
