@@ -1,106 +1,237 @@
 body {
-  font-family: 'Raleway', sans-serif;
-  margin: 0;
-  padding: 0;
-  background: linear-gradient(to bottom right, #d3d3d3, #f0f0f0);
-  color: black;
-  transition: background 0.5s ease;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    background-color: #121212;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  body {
-    background: #000;
-    color: white;
-  }
-  form {
-    background: #1f1f1f;
-    color: white;
-  }
-  button {
-    background: #a855f7;
-  }
+.top-bar {
+    background-color: #2c3e50;
+    color: #fff;
+    width: 100%;
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+}
+
+.top-bar img {
+    max-height: 100px;
+    width: auto;
+    filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.5));
 }
 
 header {
-  background: #312e81;
-  padding: 20px;
-  text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
 }
 
-.logo-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.logo-container img {
-  height: 100px;
-}
-
-.logo-container h1 {
-  margin: 10px 0 0;
-  font-family: 'Cinzel Decorative', cursive;
-  font-size: 2em;
-  color: white;
+header h1 {
+    color: #1e88e5;
+    margin-top: 10px;
+    font-family: 'Oswald', sans-serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin-top: 40px;
+    background-color: #1e1e1e;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+    width: 80%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-form {
-  background: white;
-  color: black;
-  padding: 20px;
-  border-radius: 20px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-  width: 300px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+#reloj {
+    font-size: 2.5em;
+    margin-bottom: 25px;
+    color: #bbdefb;
+    text-align: center;
+    width: 100%;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6);
 }
 
-form label,
-form select,
-form button {
-  width: 100%;
-  margin-bottom: 10px;
-  font-size: 1em;
-  border-radius: 10px;
+#selector-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 25px;
+    width: 100%;
+    align-items: center;
 }
 
-form select {
-  padding: 8px;
-  border: 1px solid #ccc;
+#selector-container select {
+    padding: 15px;
+    border: 1px solid #424242;
+    border-radius: 8px;
+    font-size: 1.2em;
+    width: 100%;
+    background-color: #212121;
+    color: #f5f5f5;
+    text-align: center;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
 }
 
-form button {
-  background: #6366f1;
-  color: white;
-  border: none;
-  padding: 10px;
-  cursor: pointer;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-  transition: transform 0.2s, background 0.3s;
+#selector-container option {
+    background-color: #212121;
+    color: #f5f5f5;
 }
 
-form button:hover {
-  transform: scale(1.05);
-  background: #8b5cf6;
+#selector-container optgroup {
+    color: #64b5f6;
+    font-weight: bold;
 }
 
-.reloj {
-  font-family: monospace;
-  font-size: 1.5em;
-  margin-bottom: 20px;
+#registrar-asistencia {
+    padding: 18px 35px;
+    font-size: 1.3em;
+    background-color: #1e88e5;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 3px 3px 5px #0d47a1,
+                5px 5px 8px #000000;
+}
+
+#registrar-asistencia:hover {
+    background-color: #1565c0;
+    transform: translate(2px, 2px);
+    box-shadow: 1px 1px 3px #0d47a1;
 }
 
 #mensaje {
-  margin-top: 10px;
-  font-weight: bold;
-  color: green;
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.1em;
+    /* Estilos por defecto para los mensajes */
+    background-color: #f0f0f0;
+    color: #333;
+    border: 1px solid #ccc;
+}
+
+#mensaje.error {
+    background-color: #ffebee; /* Rojo claro */
+    color: #d32f2f; /* Rojo oscuro */
+    border: 1px solid #ef9a9a;
+}
+
+#mensaje.success {
+    background-color: #e8f5e9; /* Verde claro */
+    color: #388e3c; /* Verde oscuro */
+    border: 1px solid #a5d6a7;
+}
+
+.oculto {
+    display: none;
+}
+
+footer {
+    margin-top: 30px;
+    color: #bdbdbd;
+    font-size: 0.9em;
+    text-align: center;
+    width: 100%;
+    padding: 15px 0;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilos para pantallas con un ancho máximo de 600px (la mayoría de los teléfonos) */
+@media (max-width: 600px) {
+    body {
+        padding: 10px; /* Añadir un poco de padding general al body en móviles */
+    }
+
+    .top-bar {
+        padding: 15px 0; /* Reducir un poco el padding superior en móviles */
+    }
+
+    .top-bar img {
+        max-height: 60px; /* Reducir el tamaño del logo en móviles */
+    }
+
+    header {
+        margin-bottom: 15px; /* Reducir el margen inferior del header en móviles */
+    }
+
+    header h1 {
+        font-size: 2em; /* Reducir el tamaño del título en móviles */
+        margin-top: 5px;
+    }
+
+    main {
+        width: 95%; /* Ocupar casi todo el ancho en móviles */
+        padding: 20px; /* Reducir el padding del main en móviles */
+        border-radius: 8px; /* Ligeramente menos redondeado en móviles */
+    }
+
+    #reloj {
+        font-size: 1.8em; /* Reducir el tamaño del reloj en móviles */
+        margin-bottom: 15px;
+    }
+
+    #selector-container {
+        margin-bottom: 15px;
+    }
+
+    #selector-container select {
+        padding: 12px;
+        font-size: 1em; /* Reducir el tamaño de la fuente del selector en móviles */
+        border-radius: 5px; /* Menos redondeado en móviles */
+    }
+
+    #registrar-asistencia {
+        padding: 12px 25px;
+        font-size: 1.1em; /* Reducir el tamaño de la fuente del botón en móviles */
+        border-radius: 5px; /* Menos redondeado en móviles */
+    }
+
+    #mensaje {
+        margin-top: 15px;
+        font-size: 1em; /* Reducir el tamaño de la fuente de los mensajes en móviles */
+        padding: 10px;
+    }
+
+    footer {
+        margin-top: 15px;
+        font-size: 0.8em; /* Reducir el tamaño de la fuente del footer en móviles */
+        padding: 10px 0;
+    }
+}
+
+/* Estilos para pantallas aún más pequeñas (ej: algunos feature phones) */
+@media (max-width: 320px) {
+    header h1 {
+        font-size: 1.6em;
+    }
+
+    #reloj {
+        font-size: 1.5em;
+    }
+
+    #selector-container select {
+        font-size: 0.9em;
+    }
+
+    #registrar-asistencia {
+        font-size: 0.9em;
+        padding: 10px 20px;
+    }
+
+    #mensaje {
+        font-size: 0.9em;
+    }
 }
